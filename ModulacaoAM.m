@@ -22,7 +22,7 @@ P = abs(Audio2_ftt/n);
 figure(1)
 plot(f,20*log10(P)) 
  xlim([0 20*10^3])
-title('Espetro do sinal Audio')
+title('Espetro do sinal Audio com frequência 4MHZ')
 xlabel('Frequencia(F)')
 ylabel('Amplitude(DB)')
 
@@ -63,11 +63,11 @@ xlabel('Frequencia(F)')
 ylabel('Amplitude(DB)')
 
 %2.8)
-Audio=x_Audio_FS_Conversion(deMod,FS2,FS);
+Audio_final=x_Audio_FS_Conversion(deMod,FS2,FS);
 
 %2.9)
 
-
-audiowrite('deModAudio.wav',deMod,FS2);
+filename='deModAudio.wav';
+audiowrite(filename,Audio_final,FS);
 
 
